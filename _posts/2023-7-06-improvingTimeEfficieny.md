@@ -4,6 +4,8 @@ title: Improving time efficiency of Vaex Implementation
 ---
 
 Though Vaex reduced memory use by RADIS to compute specturm but it is slow for smaller databank and in our case when the number of lines in the databank is very less . The slow performance of Vaex for smaller dataframes is due to three main reasons for our implementation of RADIS
+
+
 - First vaex is optimized for larger databank and doesn't focus that much for smaller dataframe .
 - Vaex uses virtual columns to reduce memory and only compute the virutal column when it is required it saves memory space but in case when virtual column 
 is required multiple times then it is computed multiple times and it costs time . For Pandas it only compute the column only once and saves it for further calculations and in-memory compute of Pandas are faster than Vaex for smaller dataframes.
